@@ -1,6 +1,6 @@
-import { assertEquals } from "jsr:@std/assert";
+import { assertEquals } from "@std/assert";
 import { combineMarkdownFiles } from "./mod.ts";
-import { dirname, fromFileUrl } from "jsr:@std/path";
+import { dirname, fromFileUrl } from "@std/path";
 
 const __dirname = dirname(fromFileUrl(import.meta.url));
 

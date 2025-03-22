@@ -1,4 +1,4 @@
-import { join } from "jsr:@std/path/join";
+import { join } from "@std/path/join";
 
 /**
  * @param dirPath - The path to the directory containing the markdown files
