@@ -4,7 +4,8 @@
   "description": "A markdown builder",
   "tasks": {
     "dev": "deno run --allow-read --watch cli.ts",
-    "start": "deno run --allow-read cli.ts"
+    "start": "deno run --allow-read cli.ts",
+    "test": "deno test --allow-read"
   },
   "imports": {
     "@std/assert": "jsr:@std/assert@^1.0.11",
