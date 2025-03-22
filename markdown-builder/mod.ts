@@ -1,1 +1,1 @@
-export { add } from "./lib.ts";
+export { combineMarkdownFiles } from "./lib.ts";
