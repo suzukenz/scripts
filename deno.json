@@ -1,0 +1,13 @@
+{
+  "workspace": ["./markdown-builder"],
+  "imports": {},
+  "fmt": {
+    "include": ["**/*.ts"]
+  },
+  "lint": {
+    "include": ["**/*.ts"],
+    "rules": {
+      "tags": ["recommended"]
+    }
+  }
+}

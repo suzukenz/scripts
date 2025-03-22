@@ -1,0 +1,13 @@
+{
+  "name": "@suzukenz/markdown-builder",
+  "version": "0.1.0",
+  "description": "A markdown builder",
+  "tasks": {
+    "dev": "deno run --allow-read --watch cli.ts",
+    "start": "deno run --allow-read cli.ts"
+  },
+  "imports": {},
+  "exports": {
+    ".": "./mod.ts"
+  }
+}
