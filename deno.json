@@ -1,5 +1,8 @@
 {
   "workspace": ["./markdown-builder"],
+  "tasks": {
+    "gen-copilot-instructions": "deno run --allow-read markdown-builder/cli.ts -d .github/copilot-instructions > .github/copilot-instructions.md"
+  },
   "imports": {},
   "fmt": {
     "include": ["**/*.ts"]

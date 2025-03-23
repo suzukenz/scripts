@@ -1,6 +1,7 @@
-import { assertEquals } from "@std/assert";
+// import { assertEquals } from "@std/assert";
+import { assert } from "./deps.ts";
 import { combineMarkdownFiles } from "./mod.ts";
-import { dirname, fromFileUrl } from "@std/path";
+import { dirname, fromFileUrl } from "./deps.ts";
 
 const __dirname = dirname(fromFileUrl(import.meta.url));
 
@@ -14,6 +15,6 @@ Deno.test({
     const expected = Deno.readTextFileSync(__dirname + "/tests/expected.md");
 
     // 結合された結果と期待される結果を比較
-    assertEquals(result, expected);
+    assert.assertEquals(result, expected);
   },
 });

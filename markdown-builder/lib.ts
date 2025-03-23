@@ -1,4 +1,4 @@
-import { join } from "@std/path/join";
+import { join } from "./deps.ts";
 
 /**
  * @param dirPath - The path to the directory containing the markdown files

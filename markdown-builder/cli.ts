@@ -1,5 +1,5 @@
 import { combineMarkdownFiles } from "./mod.ts";
-import { parseArgs } from "@std/cli/parse-args";
+import { parseArgs } from "./deps.ts";
 
 export function main(): void {
   try {
@@ -26,7 +26,7 @@ export function main(): void {
     const result = combineMarkdownFiles(dirPath);
 
     // 結果を標準出力に表示
-    console.log(result);
+    Deno.stdout.writeSync(new TextEncoder().encode(result));
   } catch (error) {
     if (error instanceof Error) {
       console.error(`エラー: ${error.message}`);

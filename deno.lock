@@ -1,10 +1,8 @@
 {
   "version": "4",
   "specifiers": {
-    "jsr:@std/assert@*": "1.0.11",
     "jsr:@std/assert@0.224": "0.224.0",
     "jsr:@std/assert@^1.0.11": "1.0.11",
-    "jsr:@std/cli@*": "1.0.14",
     "jsr:@std/cli@^1.0.14": "1.0.14",
     "jsr:@std/flags@*": "0.224.0",
     "jsr:@std/fs@*": "1.0.14",
@@ -229,16 +227,5 @@
     "https://deno.land/std@0.224.0/path/windows/to_file_url.ts": "40e560ee4854fe5a3d4d12976cef2f4e8914125c81b11f1108e127934ced502e",
     "https://deno.land/std@0.224.0/path/windows/to_namespaced_path.ts": "4ffa4fb6fae321448d5fe810b3ca741d84df4d7897e61ee29be961a6aac89a4c",
     "https://deno.land/std@0.224.0/testing/asserts.ts": "d0cdbabadc49cc4247a50732ee0df1403fdcd0f95360294ad448ae8c240f3f5c"
-  },
-  "workspace": {
-    "members": {
-      "markdown-builder": {
-        "dependencies": [
-          "jsr:@std/assert@^1.0.11",
-          "jsr:@std/cli@^1.0.14",
-          "jsr:@std/path@^1.0.8"
-        ]
-      }
-    }
   }
 }
