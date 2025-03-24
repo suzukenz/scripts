@@ -1,0 +1,12 @@
+{
+  "name": "@suzukenz/gh-pr-diff",
+  "version": "0.1.0",
+  "exports": {
+    ".": "./mod.ts"
+  },
+  "tasks": {
+    "test": "deno test",
+    "install": "deno install -g --allow-run -n prdiff cli.ts",
+    "uninstall": "deno uninstall -g prdiff"
+  }
+}

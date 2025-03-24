@@ -26,7 +26,6 @@ project-name/
 3. 公開APIを `mod.ts` で定義
 4. CLIを `cli.ts` で実装
 5. `deno task test` でテストを実行
-6. `deno task install` でグローバルにインストール
 
 
 ## Dependencies
@@ -151,3 +150,12 @@ const args = parseArgs(["--no-foo"], {
 
 assertEquals(args, { foo: false, _: [] });
 ```
+
+
+## Coding Style
+
+### 基本方針
+
+- 状態を持つ必要がない場合は、class による実装を避け、関数による実装を優先する。
+- 具体的な型を使用する。as, any の使用を避ける。
+- コードコメントは、 Whyのみを記載する。HowやWhatはコードから読み取れるようにする。

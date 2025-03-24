@@ -19,4 +19,3 @@ project-name/
 3. 公開APIを `mod.ts` で定義
 4. CLIを `cli.ts` で実装
 5. `deno task test` でテストを実行
-6. `deno task install` でグローバルにインストール
