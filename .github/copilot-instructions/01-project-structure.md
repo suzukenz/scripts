@@ -19,3 +19,26 @@ project-name/
 3. 公開APIを `mod.ts` で定義
 4. CLIを `cli.ts` で実装
 5. `deno task test` でテストを実行
+
+### deno.json
+
+cliのinstallは、`deno install -g` を利用しておこない、deno.json には必ず install, uninstall コマンドを含めます。
+各commandには、適切なパーミッション許可を付与します。例: `--allow-read`
+
+最小のdeno.json example:
+
+```json
+{
+  "name": "@suzukenz/my-script-name",
+  "version": "0.1.0",
+  "exports": {
+    ".": "./mod.ts"
+  },
+  "tasks": {
+    "run": "deno run --allow-read cli.ts", 
+    "test": "deno test --allow-read",
+    "install": "deno install -g --allow-read -n my-script-name cli.ts",
+    "uninstall": "deno uninstall -g my-script-name",
+  }
+}
+```

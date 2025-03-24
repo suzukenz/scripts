@@ -5,6 +5,7 @@
     ".": "./mod.ts"
   },
   "tasks": {
+    "run": "deno run --allow-run cli.ts",
     "test": "deno test",
     "install": "deno install -g --allow-run -n prdiff cli.ts",
     "uninstall": "deno uninstall -g prdiff"
