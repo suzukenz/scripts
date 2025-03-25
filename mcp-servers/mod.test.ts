@@ -1,10 +1,8 @@
-import {
-  Client,
-  expect,
-  InMemoryTransport,
-  McpServer,
-  StdioServerTransport,
-} from "./deps.ts";
+import { Client } from "mcp/client";
+import { expect } from "@std/expect";
+import { InMemoryTransport } from "mcp/inMemory";
+import { McpServer } from "mcp/server";
+import { StdioServerTransport } from "mcp/server/stdio";
 import { registerAddTool } from "./mod.ts";
 
 const server = new McpServer({

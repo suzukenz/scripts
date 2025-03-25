@@ -1,5 +1,5 @@
 import { combineMarkdownFiles } from "./mod.ts";
-import { parseArgs } from "./deps.ts";
+import { parseArgs } from "@std/cli";
 
 export function main(): void {
   try {

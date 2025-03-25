@@ -1,4 +1,5 @@
-import { McpServer, z } from "./deps.ts";
+import { McpServer } from "mcp/server";
+import { z } from "zod";
 
 export function registerAddTool(server: McpServer) {
   server.tool(

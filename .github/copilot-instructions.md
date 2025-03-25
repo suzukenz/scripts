@@ -59,7 +59,7 @@ cliのinstallは、`deno install -g` を利用しておこない、deno.json に
   "tasks": {
     "run": "deno run --allow-read cli.ts", 
     "test": "deno test --allow-read",
-    "install": "deno install -g --allow-read -n my-script-name cli.ts",
+    "install": "deno install -g --allow-read --config=deno.json -n my-script-name cli.ts",
     "uninstall": "deno uninstall -g my-script-name",
   }
 }
@@ -68,26 +68,7 @@ cliのinstallは、`deno install -g` を利用しておこない、deno.json に
 
 ## Dependencies
 
-依存関係の管理は deps.ts を使用します。
-
-> [!NOTE]
-> 本当は `deno.json` の "imports" を使いたいですが、`deno install` した際に import map が解決されない問題があるため、deps.tsを利用します。
-
-例:
-
-```ts
-// deps.ts
-export { BufReader } from "https://deno.land/std@0.50.0/io/bufio.ts";
-export * as path from "https://deno.land/std@0.50.0/path/mod.ts";
-```
-
-```ts
-// a.ts
-import { BufReader } from "./deps.ts";
-
-// b.ts
-import { BufReader, path } from "./deps.ts";
-```
+依存関係の管理は deno.json の "imports" を使用します。そのため、global install 時には `--config=deno.json` で、明示的にconfigファイルを指定します。
 
 
 

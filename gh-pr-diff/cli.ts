@@ -1,4 +1,4 @@
-import { parseArgs } from "./deps.ts";
+import { parseArgs } from "@std/cli";
 import { getPrDiff } from "./mod.ts";
 
 /**

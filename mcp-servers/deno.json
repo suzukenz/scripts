@@ -4,10 +4,21 @@
   "exports": {
     ".": "./mod.ts"
   },
+  "imports": {
+    "@std/path": "jsr:@std/path",
+    "@std/cli": "jsr:@std/cli/parse-args",
+    "@std/expect": "jsr:@std/expect@1.0.13",
+    "zod": "npm:zod@3.24.2",
+    "mcp/server": "npm:@modelcontextprotocol/sdk@1.7.0/server/mcp.js",
+    "mcp/server/stdio": "npm:@modelcontextprotocol/sdk@1.7.0/server/stdio.js",
+    "mcp/server/sse": "npm:@modelcontextprotocol/sdk@1.7.0/server/sse.js",
+    "mcp/inMemory": "npm:@modelcontextprotocol/sdk@1.7.0/inMemory.js",
+    "mcp/client": "npm:@modelcontextprotocol/sdk@1.7.0/client/index.js"
+  },
   "tasks": {
-    "run": "deno run --allow-env cli.ts",
-    "test": "deno test --allow-env",
-    "install": "deno install -g --allow-env suzukenz-mcp-servers cli.ts",
+    "run": "deno run --allow-env --config=deno.json cli.ts",
+    "test": "deno test --allow-env --config=deno.json",
+    "install": "deno install -g --allow-env --config=deno.json suzukenz-mcp-servers cli.ts",
     "uninstall": "deno uninstall -g suzukenz-mcp-servers"
   }
 }

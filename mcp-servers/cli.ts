@@ -1,4 +1,5 @@
-import { McpServer, StdioServerTransport } from "./deps.ts";
+import { McpServer } from "mcp/server";
+import { StdioServerTransport } from "mcp/server/stdio";
 import { registerAddTool } from "./mod.ts";
 
 if (import.meta.main) {

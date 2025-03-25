@@ -52,7 +52,7 @@ cliのinstallは、`deno install -g` を利用しておこない、deno.json に
   "tasks": {
     "run": "deno run --allow-read cli.ts", 
     "test": "deno test --allow-read",
-    "install": "deno install -g --allow-read -n my-script-name cli.ts",
+    "install": "deno install -g --allow-read --config=deno.json -n my-script-name cli.ts",
     "uninstall": "deno uninstall -g my-script-name",
   }
 }
