@@ -1,0 +1,13 @@
+{
+  "name": "@suzukenz/mcp-servers",
+  "version": "0.1.0",
+  "exports": {
+    ".": "./mod.ts"
+  },
+  "tasks": {
+    "run": "deno run --allow-env cli.ts",
+    "test": "deno test --allow-env",
+    "install": "deno install -g --allow-env suzukenz-mcp-servers cli.ts",
+    "uninstall": "deno uninstall -g suzukenz-mcp-servers"
+  }
+}

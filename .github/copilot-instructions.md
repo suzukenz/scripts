@@ -8,15 +8,30 @@ We're using Deno for this project.
 ## 各Scriptの基本構造
 
 ```plaintext
-project-name/
-├── cli.ts            # CLIエントリーポイント
-├── deno.json         # Denoプロジェクト設定
-├── deps.ts           # 依存関係の一元管理
-├── lib.ts            # コア機能の実装
-├── mod.ts            # 公開APIエントリーポイント
-├── mod.test.ts       # テストファイル
-├── README.md         # プロジェクト説明
-└── tests/            # テストリソース(必要な場合のみ)
+.(root)
+├── README.md
+├── deno.json
+├── deno.lock
+├── my-script-name      # Scriptのルートディレクトリ
+    ├── cli.ts            # CLIエントリーポイント
+    ├── deno.json         # Denoプロジェクト設定
+    ├── deps.ts           # 依存関係の一元管理
+    ├── lib.ts            # コア機能の実装
+    ├── mod.ts            # 公開APIエントリーポイント
+    ├── mod.test.ts       # テストファイル
+    ├── README.md         # プロジェクト説明
+    └── tests/            # テストリソース(必要な場合のみ)
+```
+
+新しくScriptを追加したときは、rootの deno.json に workspace を追加します。
+
+${PROJECT_ROOT}/deno.json"
+
+```json
+{
+  "workspace": ["./my-script-name"],
+  ...
+}
 ```
 
 ### 開発ワークフロー
