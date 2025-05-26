@@ -1,5 +1,10 @@
 {
-  "workspace": ["./markdown-builder", "./gh-pr-diff", "./mcp-servers"],
+  "workspace": [
+    "./markdown-builder",
+    "./gh-pr-diff",
+    "./mcp-servers",
+    "./pdf-splitter"
+  ],
   "tasks": {
     "gen-copilot-instructions": "deno run --allow-read markdown-builder/cli.ts -d .github/copilot-instructions > .github/copilot-instructions.md"
   },

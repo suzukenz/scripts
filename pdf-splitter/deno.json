@@ -1,0 +1,21 @@
+{
+  "name": "@suzukenz/pdf-splitter",
+  "version": "0.1.0",
+  "exports": {
+    ".": "./mod.ts"
+  },
+  "imports": {
+    "pdfjs-dist": "npm:pdfjs-dist@4.2.67",
+    "pdf-lib": "npm:pdf-lib@1.17.1",
+    "@std/cli": "jsr:@std/cli@^1.0.6",
+    "@std/path": "jsr:@std/path@^1.0.6",
+    "@std/fs": "jsr:@std/fs@^1.0.4",
+    "@std/assert": "jsr:@std/assert@^1.0.6"
+  },
+  "tasks": {
+    "run": "deno run --allow-read --allow-write cli.ts",
+    "test": "deno test --allow-read --allow-write",
+    "install": "deno install -g --allow-read --allow-write --config=deno.json -n pdf-splitter cli.ts",
+    "uninstall": "deno uninstall -g pdf-splitter"
+  }
+}
