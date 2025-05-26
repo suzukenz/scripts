@@ -22,10 +22,22 @@ export async function getChapterInfo(path: string): Promise<ChapterInfo[]> {
   for (const item of outline) {
     if (!item.dest) continue;
 
-    const dest = await doc.getDestination(item.dest as string);
-    if (!dest || !Array.isArray(dest)) continue;
+    // deno-lint-ignore no-explicit-any
+    let dest: any[];
+
+    // destが文字列の場合は getDestination で解決、配列の場合はそのまま使用
+    if (typeof item.dest === "string") {
+      const resolvedDest = await doc.getDestination(item.dest);
+      if (!resolvedDest || !Array.isArray(resolvedDest)) continue;
+      dest = resolvedDest;
+    } else if (Array.isArray(item.dest)) {
+      dest = item.dest;
+    } else {
+      continue;
+    }
 
     const [ref] = dest;
+
     const page = (await doc.getPageIndex(ref)) + 1; // 1-based
 
     chapters.push({ title: item.title, page });
